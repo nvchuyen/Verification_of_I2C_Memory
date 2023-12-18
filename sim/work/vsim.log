@@ -1,0 +1,325 @@
+# vsim -c -sv_seed 20 top_tb -l vsim.log -dpicpppath /usr/bin/gcc "+UVM_VERBOSITY=UVM_LOW" "+UVM_TESTNAME=test" -assertdebug -coverage "+voptargs=+acc" -do "set WildcardFilter None; add wave -position insertpoint sim:/uvm_pkg/*;
+# add wave -r top_tb/*; run -all; quit;" 
+# Start time: 09:46:10 on Dec 18,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 2 FSMs in module "i2c_mem(fast)".
+# //  Questa Sim
+# //  Version 10.7c linux Aug 17 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.i2c_i(fast)
+# Loading work.uvm_pkg(fast)
+# Loading work.agent_pkg(fast)
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading work.env_pkg(fast)
+# Loading work.seq_lib_pkg(fast)
+# Loading work.test_lib_pkg(fast)
+# Loading work.top_tb_sv_unit(fast)
+# Loading work.top_tb(fast)
+# Loading work.i2c_i(fast)
+# Loading work.i2c_mem(fast)
+# set WildcardFilter None
+# None
+#  add wave -position insertpoint sim:/uvm_pkg/*
+# 
+# add wave -r top_tb/*
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_WARNING @ 0: reporter [TPRGED] Type name 'sco' already registered with factory. No string-based lookup support for multiple types with the same type name.
+# UVM_INFO @ 0: reporter [RNTST] Running test test...
+# -------------------------------------------------------------- 
+# -------------------------------------------------------------- 
+# UVM_INFO ../test/test.svh(49) @ 0: uvm_test_top [other_test] start of Elaboration Phase Executed
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------
+# Name                       Type                    Size  Value
+# --------------------------------------------------------------
+# uvm_test_top               test                    -     @448 
+#   env                      env                     -     @456 
+#     a                      agent                   -     @476 
+#       d                    driver                  -     @501 
+#         rsp_port           uvm_analysis_port       -     @518 
+#         seq_item_port      uvm_seq_item_pull_port  -     @509 
+#       m                    mon                     -     @493 
+#         send               uvm_analysis_port       -     @659 
+#       seqr                 uvm_sequencer           -     @527 
+#         rsp_export         uvm_analysis_export     -     @535 
+#         seq_item_export    uvm_seq_item_pull_imp   -     @641 
+#         arbitration_queue  array                   0     -    
+#         lock_queue         array                   0     -    
+#         num_last_reqs      integral                32    'd1  
+#         num_last_rsps      integral                32    'd1  
+#     s                      sco                     -     @484 
+#       recv                 uvm_analysis_imp        -     @674 
+# --------------------------------------------------------------
+# 
+# UVM_INFO ../test/test.svh(51) @ 0: uvm_test_top [other_test] End of Elaboration Phase Executed
+# UVM_INFO ../sequences/reset_dut.svh(28) @ 0: uvm_test_top.env.a.seqr@@rstdut [SEQ] MODE : RESET
+# UVM_INFO ../agents/mon.svh(42) @ 10: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(35) @ 10: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/reset_dut.svh(28) @ 10: uvm_test_top.env.a.seqr@@rstdut [SEQ] MODE : RESET
+# UVM_INFO ../agents/mon.svh(42) @ 30: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(35) @ 30: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/reset_dut.svh(28) @ 30: uvm_test_top.env.a.seqr@@rstdut [SEQ] MODE : RESET
+# UVM_INFO ../agents/mon.svh(42) @ 50: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(35) @ 50: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/reset_dut.svh(28) @ 50: uvm_test_top.env.a.seqr@@rstdut [SEQ] MODE : RESET
+# UVM_INFO ../agents/mon.svh(42) @ 70: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(35) @ 70: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/reset_dut.svh(28) @ 70: uvm_test_top.env.a.seqr@@rstdut [SEQ] MODE : RESET
+# UVM_INFO ../agents/mon.svh(42) @ 90: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(35) @ 90: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/reset_dut.svh(28) @ 90: uvm_test_top.env.a.seqr@@rstdut [SEQ] MODE : RESET
+# UVM_INFO ../agents/mon.svh(42) @ 110: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(35) @ 110: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/reset_dut.svh(28) @ 110: uvm_test_top.env.a.seqr@@rstdut [SEQ] MODE : RESET
+# UVM_INFO ../agents/mon.svh(42) @ 130: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(35) @ 130: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/reset_dut.svh(28) @ 130: uvm_test_top.env.a.seqr@@rstdut [SEQ] MODE : RESET
+# UVM_INFO ../agents/mon.svh(42) @ 150: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(35) @ 150: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/reset_dut.svh(28) @ 150: uvm_test_top.env.a.seqr@@rstdut [SEQ] MODE : RESET
+# UVM_INFO ../agents/mon.svh(42) @ 170: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(35) @ 170: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/reset_dut.svh(28) @ 170: uvm_test_top.env.a.seqr@@rstdut [SEQ] MODE : RESET
+# UVM_INFO ../agents/mon.svh(42) @ 190: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(35) @ 190: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/reset_dut.svh(28) @ 190: uvm_test_top.env.a.seqr@@rstdut [SEQ] MODE : RESET
+# UVM_INFO ../agents/mon.svh(42) @ 210: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(35) @ 210: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/reset_dut.svh(28) @ 210: uvm_test_top.env.a.seqr@@rstdut [SEQ] MODE : RESET
+# UVM_INFO ../agents/mon.svh(42) @ 230: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(35) @ 230: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/reset_dut.svh(28) @ 230: uvm_test_top.env.a.seqr@@rstdut [SEQ] MODE : RESET
+# UVM_INFO ../agents/mon.svh(42) @ 250: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(35) @ 250: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/reset_dut.svh(28) @ 250: uvm_test_top.env.a.seqr@@rstdut [SEQ] MODE : RESET
+# UVM_INFO ../agents/mon.svh(42) @ 270: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(35) @ 270: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/reset_dut.svh(28) @ 270: uvm_test_top.env.a.seqr@@rstdut [SEQ] MODE : RESET
+# UVM_INFO ../agents/mon.svh(42) @ 290: uvm_test_top.env.a.m [MON] SYSTEM RESET DETECTED
+# UVM_INFO ../agents/sco.svh(35) @ 290: uvm_test_top.env.s [SCO] SYSTEM RESET DETECTED
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/write_data.svh(29) @ 290: uvm_test_top.env.a.seqr@@wdata [SEQ] MODE : WRITE DIN : 68 ADDR : 3 
+# UVM_INFO ../agents/driver.svh(47) @ 290: uvm_test_top.env.a.d [DRV] mode : WRITE addr : 3  din : 68
+# UVM_INFO ../agents/mon.svh(54) @ 830: uvm_test_top.env.a.m [MON] DATA WRITE addr:3 data:68
+# UVM_INFO ../agents/sco.svh(40) @ 830: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:3, wdata:68 arr_wr:68
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/write_data.svh(29) @ 830: uvm_test_top.env.a.seqr@@wdata [SEQ] MODE : WRITE DIN : 219 ADDR : 8 
+# UVM_INFO ../agents/driver.svh(47) @ 830: uvm_test_top.env.a.d [DRV] mode : WRITE addr : 8  din : 219
+# UVM_INFO ../agents/mon.svh(54) @ 1330: uvm_test_top.env.a.m [MON] DATA WRITE addr:8 data:219
+# UVM_INFO ../agents/sco.svh(40) @ 1330: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:8, wdata:219 arr_wr:219
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/write_data.svh(29) @ 1330: uvm_test_top.env.a.seqr@@wdata [SEQ] MODE : WRITE DIN : 87 ADDR : 9 
+# UVM_INFO ../agents/driver.svh(47) @ 1330: uvm_test_top.env.a.d [DRV] mode : WRITE addr : 9  din : 87
+# UVM_INFO ../agents/mon.svh(54) @ 1830: uvm_test_top.env.a.m [MON] DATA WRITE addr:9 data:87
+# UVM_INFO ../agents/sco.svh(40) @ 1830: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:9, wdata:87 arr_wr:87
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/write_data.svh(29) @ 1830: uvm_test_top.env.a.seqr@@wdata [SEQ] MODE : WRITE DIN : 219 ADDR : 8 
+# UVM_INFO ../agents/driver.svh(47) @ 1830: uvm_test_top.env.a.d [DRV] mode : WRITE addr : 8  din : 219
+# UVM_INFO ../agents/mon.svh(54) @ 2330: uvm_test_top.env.a.m [MON] DATA WRITE addr:8 data:219
+# UVM_INFO ../agents/sco.svh(40) @ 2330: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:8, wdata:219 arr_wr:219
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/write_data.svh(29) @ 2330: uvm_test_top.env.a.seqr@@wdata [SEQ] MODE : WRITE DIN : 107 ADDR : 10 
+# UVM_INFO ../agents/driver.svh(47) @ 2330: uvm_test_top.env.a.d [DRV] mode : WRITE addr : 10  din : 107
+# UVM_INFO ../agents/mon.svh(54) @ 2830: uvm_test_top.env.a.m [MON] DATA WRITE addr:10 data:107
+# UVM_INFO ../agents/sco.svh(40) @ 2830: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:10, wdata:107 arr_wr:107
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/write_data.svh(29) @ 2830: uvm_test_top.env.a.seqr@@wdata [SEQ] MODE : WRITE DIN : 47 ADDR : 8 
+# UVM_INFO ../agents/driver.svh(47) @ 2830: uvm_test_top.env.a.d [DRV] mode : WRITE addr : 8  din : 47
+# UVM_INFO ../agents/mon.svh(54) @ 3330: uvm_test_top.env.a.m [MON] DATA WRITE addr:8 data:47
+# UVM_INFO ../agents/sco.svh(40) @ 3330: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:8, wdata:47 arr_wr:47
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/write_data.svh(29) @ 3330: uvm_test_top.env.a.seqr@@wdata [SEQ] MODE : WRITE DIN : 179 ADDR : 7 
+# UVM_INFO ../agents/driver.svh(47) @ 3330: uvm_test_top.env.a.d [DRV] mode : WRITE addr : 7  din : 179
+# UVM_INFO ../agents/mon.svh(54) @ 3830: uvm_test_top.env.a.m [MON] DATA WRITE addr:7 data:179
+# UVM_INFO ../agents/sco.svh(40) @ 3830: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:7, wdata:179 arr_wr:179
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/write_data.svh(29) @ 3830: uvm_test_top.env.a.seqr@@wdata [SEQ] MODE : WRITE DIN : 132 ADDR : 9 
+# UVM_INFO ../agents/driver.svh(47) @ 3830: uvm_test_top.env.a.d [DRV] mode : WRITE addr : 9  din : 132
+# UVM_INFO ../agents/mon.svh(54) @ 4330: uvm_test_top.env.a.m [MON] DATA WRITE addr:9 data:132
+# UVM_INFO ../agents/sco.svh(40) @ 4330: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:9, wdata:132 arr_wr:132
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/write_data.svh(29) @ 4330: uvm_test_top.env.a.seqr@@wdata [SEQ] MODE : WRITE DIN : 105 ADDR : 2 
+# UVM_INFO ../agents/driver.svh(47) @ 4330: uvm_test_top.env.a.d [DRV] mode : WRITE addr : 2  din : 105
+# UVM_INFO ../agents/mon.svh(54) @ 4830: uvm_test_top.env.a.m [MON] DATA WRITE addr:2 data:105
+# UVM_INFO ../agents/sco.svh(40) @ 4830: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:2, wdata:105 arr_wr:105
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/write_data.svh(29) @ 4830: uvm_test_top.env.a.seqr@@wdata [SEQ] MODE : WRITE DIN : 151 ADDR : 9 
+# UVM_INFO ../agents/driver.svh(47) @ 4830: uvm_test_top.env.a.d [DRV] mode : WRITE addr : 9  din : 151
+# UVM_INFO ../agents/mon.svh(54) @ 5330: uvm_test_top.env.a.m [MON] DATA WRITE addr:9 data:151
+# UVM_INFO ../agents/sco.svh(40) @ 5330: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:9, wdata:151 arr_wr:151
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/write_data.svh(29) @ 5330: uvm_test_top.env.a.seqr@@wdata [SEQ] MODE : WRITE DIN : 217 ADDR : 2 
+# UVM_INFO ../agents/driver.svh(47) @ 5330: uvm_test_top.env.a.d [DRV] mode : WRITE addr : 2  din : 217
+# UVM_INFO ../agents/mon.svh(54) @ 5830: uvm_test_top.env.a.m [MON] DATA WRITE addr:2 data:217
+# UVM_INFO ../agents/sco.svh(40) @ 5830: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:2, wdata:217 arr_wr:217
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/write_data.svh(29) @ 5830: uvm_test_top.env.a.seqr@@wdata [SEQ] MODE : WRITE DIN : 86 ADDR : 10 
+# UVM_INFO ../agents/driver.svh(47) @ 5830: uvm_test_top.env.a.d [DRV] mode : WRITE addr : 10  din : 86
+# UVM_INFO ../agents/mon.svh(54) @ 6330: uvm_test_top.env.a.m [MON] DATA WRITE addr:10 data:86
+# UVM_INFO ../agents/sco.svh(40) @ 6330: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:10, wdata:86 arr_wr:86
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/write_data.svh(29) @ 6330: uvm_test_top.env.a.seqr@@wdata [SEQ] MODE : WRITE DIN : 245 ADDR : 6 
+# UVM_INFO ../agents/driver.svh(47) @ 6330: uvm_test_top.env.a.d [DRV] mode : WRITE addr : 6  din : 245
+# UVM_INFO ../agents/mon.svh(54) @ 6830: uvm_test_top.env.a.m [MON] DATA WRITE addr:6 data:245
+# UVM_INFO ../agents/sco.svh(40) @ 6830: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:6, wdata:245 arr_wr:245
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/write_data.svh(29) @ 6830: uvm_test_top.env.a.seqr@@wdata [SEQ] MODE : WRITE DIN : 65 ADDR : 9 
+# UVM_INFO ../agents/driver.svh(47) @ 6830: uvm_test_top.env.a.d [DRV] mode : WRITE addr : 9  din : 65
+# UVM_INFO ../agents/mon.svh(54) @ 7330: uvm_test_top.env.a.m [MON] DATA WRITE addr:9 data:65
+# UVM_INFO ../agents/sco.svh(40) @ 7330: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:9, wdata:65 arr_wr:65
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/write_data.svh(29) @ 7330: uvm_test_top.env.a.seqr@@wdata [SEQ] MODE : WRITE DIN : 65 ADDR : 4 
+# UVM_INFO ../agents/driver.svh(47) @ 7330: uvm_test_top.env.a.d [DRV] mode : WRITE addr : 4  din : 65
+# UVM_INFO ../agents/mon.svh(54) @ 7830: uvm_test_top.env.a.m [MON] DATA WRITE addr:4 data:65
+# UVM_INFO ../agents/sco.svh(40) @ 7830: uvm_test_top.env.s [SCO] DATA WRITE OP  addr:4, wdata:65 arr_wr:65
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/read_data.svh(29) @ 7830: uvm_test_top.env.a.seqr@@rdata [SEQ] MODE : READ ADDR : 3 
+# UVM_INFO ../agents/driver.svh(56) @ 7830: uvm_test_top.env.a.d [DRV] mode : READ addr : 3  din : 175
+# UVM_INFO ../agents/mon.svh(65) @ 8310: uvm_test_top.env.a.m [MON] DATA READ addr:3 data:68 
+# UVM_INFO ../agents/sco.svh(47) @ 8310: uvm_test_top.env.s [SCO] DATA MATCHED : addr:3, rdata:68
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/read_data.svh(29) @ 8310: uvm_test_top.env.a.seqr@@rdata [SEQ] MODE : READ ADDR : 6 
+# UVM_INFO ../agents/driver.svh(56) @ 8310: uvm_test_top.env.a.d [DRV] mode : READ addr : 6  din : 248
+# UVM_INFO ../agents/mon.svh(65) @ 8790: uvm_test_top.env.a.m [MON] DATA READ addr:6 data:245 
+# UVM_INFO ../agents/sco.svh(47) @ 8790: uvm_test_top.env.s [SCO] DATA MATCHED : addr:6, rdata:245
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/read_data.svh(29) @ 8790: uvm_test_top.env.a.seqr@@rdata [SEQ] MODE : READ ADDR : 2 
+# UVM_INFO ../agents/driver.svh(56) @ 8790: uvm_test_top.env.a.d [DRV] mode : READ addr : 2  din : 158
+# UVM_INFO ../agents/mon.svh(65) @ 9310: uvm_test_top.env.a.m [MON] DATA READ addr:2 data:217 
+# UVM_INFO ../agents/sco.svh(47) @ 9310: uvm_test_top.env.s [SCO] DATA MATCHED : addr:2, rdata:217
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/read_data.svh(29) @ 9310: uvm_test_top.env.a.seqr@@rdata [SEQ] MODE : READ ADDR : 1 
+# UVM_INFO ../agents/driver.svh(56) @ 9310: uvm_test_top.env.a.d [DRV] mode : READ addr : 1  din : 80
+# UVM_INFO ../agents/mon.svh(65) @ 9830: uvm_test_top.env.a.m [MON] DATA READ addr:1 data:0 
+# UVM_INFO ../agents/sco.svh(47) @ 9830: uvm_test_top.env.s [SCO] DATA MATCHED : addr:1, rdata:0
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/read_data.svh(29) @ 9830: uvm_test_top.env.a.seqr@@rdata [SEQ] MODE : READ ADDR : 5 
+# UVM_INFO ../agents/driver.svh(56) @ 9830: uvm_test_top.env.a.d [DRV] mode : READ addr : 5  din : 168
+# UVM_INFO ../agents/mon.svh(65) @ 10310: uvm_test_top.env.a.m [MON] DATA READ addr:5 data:0 
+# UVM_INFO ../agents/sco.svh(47) @ 10310: uvm_test_top.env.s [SCO] DATA MATCHED : addr:5, rdata:0
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/read_data.svh(29) @ 10310: uvm_test_top.env.a.seqr@@rdata [SEQ] MODE : READ ADDR : 7 
+# UVM_INFO ../agents/driver.svh(56) @ 10310: uvm_test_top.env.a.d [DRV] mode : READ addr : 7  din : 218
+# UVM_INFO ../agents/mon.svh(65) @ 10790: uvm_test_top.env.a.m [MON] DATA READ addr:7 data:179 
+# UVM_INFO ../agents/sco.svh(47) @ 10790: uvm_test_top.env.s [SCO] DATA MATCHED : addr:7, rdata:179
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/read_data.svh(29) @ 10790: uvm_test_top.env.a.seqr@@rdata [SEQ] MODE : READ ADDR : 1 
+# UVM_INFO ../agents/driver.svh(56) @ 10790: uvm_test_top.env.a.d [DRV] mode : READ addr : 1  din : 115
+# UVM_INFO ../agents/mon.svh(65) @ 11310: uvm_test_top.env.a.m [MON] DATA READ addr:1 data:0 
+# UVM_INFO ../agents/sco.svh(47) @ 11310: uvm_test_top.env.s [SCO] DATA MATCHED : addr:1, rdata:0
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/read_data.svh(29) @ 11310: uvm_test_top.env.a.seqr@@rdata [SEQ] MODE : READ ADDR : 8 
+# UVM_INFO ../agents/driver.svh(56) @ 11310: uvm_test_top.env.a.d [DRV] mode : READ addr : 8  din : 177
+# UVM_INFO ../agents/mon.svh(65) @ 11790: uvm_test_top.env.a.m [MON] DATA READ addr:8 data:47 
+# UVM_INFO ../agents/sco.svh(47) @ 11790: uvm_test_top.env.s [SCO] DATA MATCHED : addr:8, rdata:47
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/read_data.svh(29) @ 11790: uvm_test_top.env.a.seqr@@rdata [SEQ] MODE : READ ADDR : 6 
+# UVM_INFO ../agents/driver.svh(56) @ 11790: uvm_test_top.env.a.d [DRV] mode : READ addr : 6  din : 105
+# UVM_INFO ../agents/mon.svh(65) @ 12270: uvm_test_top.env.a.m [MON] DATA READ addr:6 data:245 
+# UVM_INFO ../agents/sco.svh(47) @ 12270: uvm_test_top.env.s [SCO] DATA MATCHED : addr:6, rdata:245
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/read_data.svh(29) @ 12270: uvm_test_top.env.a.seqr@@rdata [SEQ] MODE : READ ADDR : 8 
+# UVM_INFO ../agents/driver.svh(56) @ 12270: uvm_test_top.env.a.d [DRV] mode : READ addr : 8  din : 241
+# UVM_INFO ../agents/mon.svh(65) @ 12790: uvm_test_top.env.a.m [MON] DATA READ addr:8 data:47 
+# UVM_INFO ../agents/sco.svh(47) @ 12790: uvm_test_top.env.s [SCO] DATA MATCHED : addr:8, rdata:47
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/read_data.svh(29) @ 12790: uvm_test_top.env.a.seqr@@rdata [SEQ] MODE : READ ADDR : 8 
+# UVM_INFO ../agents/driver.svh(56) @ 12790: uvm_test_top.env.a.d [DRV] mode : READ addr : 8  din : 204
+# UVM_INFO ../agents/mon.svh(65) @ 13270: uvm_test_top.env.a.m [MON] DATA READ addr:8 data:47 
+# UVM_INFO ../agents/sco.svh(47) @ 13270: uvm_test_top.env.s [SCO] DATA MATCHED : addr:8, rdata:47
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/read_data.svh(29) @ 13270: uvm_test_top.env.a.seqr@@rdata [SEQ] MODE : READ ADDR : 6 
+# UVM_INFO ../agents/driver.svh(56) @ 13270: uvm_test_top.env.a.d [DRV] mode : READ addr : 6  din : 191
+# UVM_INFO ../agents/mon.svh(65) @ 13750: uvm_test_top.env.a.m [MON] DATA READ addr:6 data:245 
+# UVM_INFO ../agents/sco.svh(47) @ 13750: uvm_test_top.env.s [SCO] DATA MATCHED : addr:6, rdata:245
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/read_data.svh(29) @ 13750: uvm_test_top.env.a.seqr@@rdata [SEQ] MODE : READ ADDR : 2 
+# UVM_INFO ../agents/driver.svh(56) @ 13750: uvm_test_top.env.a.d [DRV] mode : READ addr : 2  din : 220
+# UVM_INFO ../agents/mon.svh(65) @ 14270: uvm_test_top.env.a.m [MON] DATA READ addr:2 data:217 
+# UVM_INFO ../agents/sco.svh(47) @ 14270: uvm_test_top.env.s [SCO] DATA MATCHED : addr:2, rdata:217
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/read_data.svh(29) @ 14270: uvm_test_top.env.a.seqr@@rdata [SEQ] MODE : READ ADDR : 4 
+# UVM_INFO ../agents/driver.svh(56) @ 14270: uvm_test_top.env.a.d [DRV] mode : READ addr : 4  din : 85
+# UVM_INFO ../agents/mon.svh(65) @ 14790: uvm_test_top.env.a.m [MON] DATA READ addr:4 data:65 
+# UVM_INFO ../agents/sco.svh(47) @ 14790: uvm_test_top.env.s [SCO] DATA MATCHED : addr:4, rdata:65
+# ----------------------------------------------------------------
+# UVM_INFO ../sequences/read_data.svh(29) @ 14790: uvm_test_top.env.a.seqr@@rdata [SEQ] MODE : READ ADDR : 7 
+# UVM_INFO ../agents/driver.svh(56) @ 14790: uvm_test_top.env.a.d [DRV] mode : READ addr : 7  din : 106
+# UVM_INFO ../agents/mon.svh(65) @ 15270: uvm_test_top.env.a.m [MON] DATA READ addr:7 data:179 
+# UVM_INFO ../agents/sco.svh(47) @ 15270: uvm_test_top.env.s [SCO] DATA MATCHED : addr:7, rdata:179
+# ----------------------------------------------------------------
+# UVM_INFO /11tools/MENTOR/questasim_10.7c/questasim/verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 15270: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../test/test.svh(69) @ 15270: uvm_test_top [test] ---------------------------------------
+# UVM_INFO ../test/test.svh(70) @ 15270: uvm_test_top [test] ----           TEST PASS           ----
+# UVM_INFO ../test/test.svh(71) @ 15270: uvm_test_top [test] ---------------------------------------
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  173
+# UVM_WARNING :    1
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [DRV]    30
+# [MON]    45
+# [RNTST]     1
+# [SCO]    45
+# [SEQ]    45
+# [TEST_DONE]     1
+# [TPRGED]     1
+# [UVMTOP]     1
+# [other_test]     2
+# [test]     3
+# ** Note: $finish    : /11tools/MENTOR/questasim_10.7c/questasim/verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 15270 ns  Iteration: 62  Instance: /top_tb
+# End time: 09:46:15 on Dec 18,2023, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 0

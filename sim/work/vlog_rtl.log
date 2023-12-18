@@ -1,0 +1,10 @@
+QuestaSim vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 09:46:07 on Dec 18,2023
+vlog -sv -l vlog_rtl.log -f filelist_rtl.f -incr "+acc=mnprt" "+cover=sbceft" -assertdebug 
+-- Compiling module i2c_mem
+-- Compiling interface i2c_i
+
+Top level modules:
+	i2c_mem
+End time: 09:46:07 on Dec 18,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

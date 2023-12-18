@@ -1,0 +1,28 @@
+QuestaSim vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 09:46:06 on Dec 18,2023
+vlog -incr -timescale=1ns/1ns -sv -f filelist_tb.f -l vlog_tb.log "+acc=mnprt" -assertdebug "+define+test" 
+-- Compiling package uvm_pkg
+** Warning: ** while parsing file included at /11tools/MENTOR/questasim_10.7c/questasim/verilog_src/uvm-1.1d/src/uvm.sv(23)
+** at /11tools/MENTOR/questasim_10.7c/questasim/verilog_src/uvm-1.1d/src/uvm_pkg.sv(29): (vlog-2275) 'uvm_pkg' already exists and will be overwritten.
+-- Skipping package uvm_pkg
+** Warning: ../top_tb/top_tb.sv(12): (vlog-2283) Extra semicolon in $unit (global) scope.
+-- Compiling package top_tb_sv_unit
+-- Compiling package agent_pkg
+-- Compiling package env_pkg
+-- Compiling package seq_lib_pkg
+-- Compiling package test_lib_pkg
+-- Compiling module top_tb
+-- Scanning library directory '../env'
+-- Scanning library directory '../agents'
+-- Scanning library directory '../sequences'
+-- Scanning library directory '../test'
+-- Scanning library directory '../top_tb'
+
+Referenced (but uncompiled) modules or primitives:
+	i2c_i
+	i2c_mem
+
+Top level modules:
+	top_tb
+End time: 09:46:07 on Dec 18,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 2
